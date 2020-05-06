@@ -17,3 +17,12 @@ In this way the last line of the code will be ignored.
 ```
 python app.py
 ```
+For this error:
+
+ModuleNotFoundError: No module named 'werkzeug.contrib'
+
+Try the following solutions:
+```
+pip3 uninstall Werkzeug
+pip3 install Werkzeug==0.16.0
+```
