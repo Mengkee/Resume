@@ -1,5 +1,5 @@
-# This is a flask app aimming to design a resume website.
-User can choose the language, color and font of the website.
+# This is a resume website created using flask app.
+User can choose the language, the color and the font of the it.
 
 There is more to offer...
 
