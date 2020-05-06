@@ -11,6 +11,14 @@
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/mainpage.css') }}">
       <meta charset="utf-8">
+      <script type="text/javascript">// <![CDATA[
+        function preloader(){
+
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("content").style.display = "block";
+        }//preloader
+        window.onload = window.setTimeout(preloader, 3000);
+// ]]></script>
       <style media="screen">
     h1 {
       color: {{ color }};
@@ -28,6 +36,7 @@
   </head>
 
   <body>
+  <div id="content">
     <div class="container" id="main">
       <div class="row">
         <div class="col-sm">
@@ -44,10 +53,10 @@
         <input type="submit" name="button" value="Times">
         <input type="submit" name="button" value="Arial"> -->
 
-        <button type="submit" name="button" value="cursive">Cursive</button>
-        <button type="submit" name="button" value="fantasy">Fantasy </button>
-        <button type="submit" name="button" value="Times"> Times</button>
-        <button type="submit" name="button" value="Arial">Arial </button>
+        <button type="submit" name="button" value="cursive">&hearts;	Cursive</button>
+        <button type="submit" name="button" value="fantasy">&hearts;	Fantasy </button>
+        <button type="submit" name="button" value="Times">&hearts;	 Times</button>
+        <button type="submit" name="button" value="Arial">&hearts;	Arial </button>
       </form>
     </div>
     <div class="col-sm">
@@ -62,16 +71,20 @@
     <div class="col-sm">
       Choose the language you like:
       <form class="" action="{{ url_for('font') }}" method="post">
-        <button type="submit" name="LAN" value="ENG" style="background: #c94c4c">Eng</button>
-        <button type="submit" name="LAN" value="CHI"style="background: #00baad">Chi</button>
+        <button type="submit" name="LAN" value="ENG" style="background: #c94c4c">&hearts;	Eng</button>
+        <button type="submit" name="LAN" value="CHI"style="background: #00baad">&hearts;	Chi</button>
       </form>
+      </div>
     </div>
   </div>
-</div>
     {% block body %}
     {% endblock %}
+        </div>
+        </div>
+      </div>
     </div>
-    </div>
+    <div id="loading">
+
     </div>
   </body>
 </html>

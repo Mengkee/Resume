@@ -20,6 +20,13 @@ h3 {
   font-family: 'Cinzel', serif;
 
 }
+.title {
+  font-size: 120%;
+}
+.time {
+  font-style: italic;
+  font-size: 110%;
+}
 .heading {
   text-align: center;
 }
@@ -33,3 +40,21 @@ h3 {
 .block {
   padding: 10px;
 }
+
+div#content {
+    display: none;
+    }
+
+div#loading {
+    top:25%;
+    left: 25%;
+    right: 25%;
+    margin: auto;
+    position: absolute;
+    z-index: 1000;
+    background-position: center;
+    width: 1600px;
+    height: 240px;
+    background: url(../img/loadingimage.gif) no-repeat;
+    cursor: wait;
+    }
