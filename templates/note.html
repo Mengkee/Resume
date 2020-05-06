@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+  Note taking
+{% endblock %}
+
+{% block body %}
+<!-- action is where I should submit my form to  -->
+<!-- This form will look for the function-->
+  <ul>
+    {% for note in notes %}
+    <li>{{ note }}</li>
+    {% endfor %}
+  </ul>
+  <a href="{{ url_for('more') }}">See more..</a>
+{% endblock %}

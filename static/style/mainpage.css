@@ -1,0 +1,35 @@
+/*
+font-family: 'Cinzel', serif;
+font-family: 'Great Vibes', cursive;
+font-family: 'Sacramento', cursive;
+font-family: 'Playfair Display SC', serif;
+font-family: 'Montserrat Alternates', sans-serif;
+font-family: 'Monoton', cursive;
+font-family: 'Tangerine', cursive;
+font-family: 'Long Cang', cursive;
+font-family: 'Liu Jian Mao Cao', cursive;
+*/
+#main {
+  box-shadow: 10px 10px grey;
+  background-color: #eddd53;
+}
+body {
+
+}
+h3 {
+  font-family: 'Cinzel', serif;
+
+}
+.heading {
+  text-align: center;
+}
+.photo {
+  border-radius: 50px;
+  text-align: center;
+}
+.details {
+  text-align: center;
+}
+.block {
+  padding: 10px;
+}

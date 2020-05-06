@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+  <div class="heading">
+     <img class="photo" src="../static/img/self_photo.jpg" alt="loading" width="5%">
+     <h1>吕梦珂简历</h1>
+  </div>
+  <div class="details">
+    电话: 18810875113 | 邮箱: mengke.lyu@cass.city.ac.uk
+  </div>
+{% endblock %}
+
+{% block body %}
+<!-- action is where I should submit my form to  -->
+<!-- This form will look for the function-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="block">
+        <h3>自我介绍</h3>
+        <p>I have studied AS for five years and passed eight exams under the curriculum of IFoA.
+        I'm passionate about actuarial science and data science.</p>
+      </div>
+      <div class="block">
+        <h3>教育背景</h3>
+        <p>Bsc, Univiersity of International Business and Economics, Beijing
+          September 2015 — June 2019
+          I studied Actuarial science in UIBE and got the IFoA exam exemption for modules CT1, CT2, CT3, CT4,
+          CT5, CT6, CT7, CT8.
+          I was awarded the Excellent student in the second academic year.
+          I hosted several forums discussing psychology.
+          Msc, Cass Business School, LONDON
+          September 2019 — January 2021
+          I'm currently studying Actuarial management.
+          Expected to get the exemptions for CP1, CP2, SP2, SP8.</p>
+      </div>
+      <div class="block">
+        <h3>实习经历</h3>
+        <p>
+          Student representative at IFoA Beijing office, Beijing
+          September 2018 — November 2018
+          • Translate ~30 articles from the website of IFoA and IFoA magazine: The Actuary (English to Chinese)
+          • Design ~40 tweets for IFoA’s wechat official account.
+          • Build up connection between IFoA and actuary students.
+          • Participate in organizing IFoA events
+          Actuarial finance intern at Munich Re, Beijing
+          February 2019 — August 2019
+          • Monitor the loss experience, calculate A/E ratio and loss ratio for 4+ insurers.
+          • Perform the experience study for ChinaLife.
+          • Check itemized bill for Huaxia, Chinalife and many other insurers.
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="block">
+        <h3>技能</h3>
+        <div class="skillset">
+          VBA
+          <br>
+          &hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&loz;&loz;&loz;
+        </div>
+        <div class="skillset">
+          R
+          <br>
+          &hearts;&hearts;&hearts;&hearts;&hearts;&loz;&loz;&loz;&loz;
+        </div>
+        <div class="skillset">
+          Python (This website is created using flask)
+          <br>
+          &hearts;&hearts;&hearts;&hearts;&loz;&loz;&loz;&loz;&loz;
+        </div>
+        <div class="skillset">
+          HTML / CSS
+          <br>
+          &hearts;&hearts;&hearts;&hearts;&loz;&loz;&loz;&loz;&loz;
+        </div>
+        <div class="skillset">
+          Javascript
+          <br>
+          &hearts;&hearts;&hearts;&hearts;&loz;&loz;&loz;&loz;&loz;
+        </div>
+        <div class="skillset">
+          Node.js
+          <br>
+          &hearts;&hearts;&hearts;&hearts;&loz;&loz;&loz;&loz;&loz;
+        </div>
+      </div>
+      <div class="block">
+        <h3>Links</h3>
+      </div>
+      <div class="block">
+        <h3></h3>
+      </div>
+      <div class="block">
+        <h3>Hobbies</h3>
+        <ul>
+          <li>
+            Coding
+          </li>
+          <li>
+            Swimming
+          </li>
+          <li>
+            Running
+          </li>
+          <li>
+            Jogging
+          </li>
+          <li>
+            Socializing
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <form class="form1" action="{{ url_for('hello') }}" method="post">
+    <input type="text" name="name" placeholder="Enter your name">
+    <button>Submit</button>
+  </form>
+
+  <form class="form1" action="{{ url_for('note') }}" method="post">
+    <input type="text" name="note" placeholder="Enter the note">
+    <button>Add note</button>
+  </form>
+
+  <ul>
+    {% for name in names %}
+    <li>{{name}}</li>
+    {% endfor %}
+  </ul>
+  <a href="{{ url_for('more') }}">See more..</a>
+{% endblock %}
